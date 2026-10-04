@@ -53,7 +53,7 @@ python -m http.server 8000
 
 ## 디자인
 
-세가코리아 공식 사이트 느낌의 파란 계열(`--sega`)과 노란 포인트(`--ring`)를 씁니다. 글꼴은 [Pretendard](https://github.com/orioncactus/pretendard)(SIL Open Font License 1.1)를 jsDelivr에서 불러옵니다. 디자인 토큰은 각 프로젝트 사이트와 같게 유지합니다.
+세가코리아 공식 사이트 느낌의 파란 계열(`--sega`)과 노란 포인트(`--ring`)를 씁니다. 글꼴은 SEGA 아시아 공식 사이트와 같은 [Noto Sans KR](https://fonts.google.com/noto/specimen/Noto+Sans+KR)(SIL Open Font License 1.1)을 Google Fonts에서 불러옵니다. 디자인 토큰은 각 프로젝트 사이트와 같게 유지합니다.
 
 ## 권리 안내
 
