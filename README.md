@@ -37,6 +37,7 @@ https://nonunsaram.github.io/ 에 게시되는 소닉 시리즈 비공식 한국
 | `related` | 함께 보여 줄 다른 프로젝트의 `id` 목록 (선택) |
 | `image` | 카드 대표 그림 (선택). `assets/img/games/`에 넣은 파일 경로나 외부 이미지 주소. 16:9 비율이 가장 잘 맞습니다. 없거나 불러오지 못하면 기종 색 배경에 영문 제목이 나옵니다. |
 | `imageFit` | 로고처럼 잘리면 안 되는 그림은 `"contain"` (선택) |
+| `imagePosition` | 세로로 긴 표지에서 보여 줄 위치 (선택). 예: `"center 30%"` (0%는 위, 100%는 아래) |
 | `logo` | 대표 그림 위에 겹쳐 올릴 투명 로고 (선택) |
 | `version`, `updated` | 선택. `updated`가 없으면 `related`의 첫 프로젝트 바로 뒤에 표시됩니다. |
 

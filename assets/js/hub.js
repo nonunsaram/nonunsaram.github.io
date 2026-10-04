@@ -65,7 +65,7 @@ function projectMedia(project, platform) {
   const media = el('div', { class: `media${project.image ? '' : ' no-image'}`, style: `--platform:${platform.color}` },
     el('span', { class: 'media-title', 'aria-hidden': 'true' }, project.originalTitle));
   if (project.image) {
-    const image = el('img', { src: project.image, alt: '', loading: 'lazy', decoding: 'async', class: project.imageFit === 'contain' ? 'contain' : '' });
+    const image = el('img', { src: project.image, alt: '', loading: 'lazy', decoding: 'async', class: project.imageFit === 'contain' ? 'contain' : '', style: project.imagePosition ? `object-position:${project.imagePosition}` : undefined });
     image.addEventListener('error', () => { image.remove(); media.classList.add('no-image'); });
     media.prepend(image);
   }
