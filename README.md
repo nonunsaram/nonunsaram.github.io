@@ -34,7 +34,7 @@ https://nonunsaram.github.io/ 에 게시되는 소닉 시리즈 비공식 한국
 | `platform` | `data/platforms.json`의 키 (`gamecube`, `wii`, `ps2`, `pc`, `megadrive`). 새 기종은 그 파일에 이름과 색을 추가합니다. 여러 기종을 한 카드에 묶으려면 `["gamecube", "pc"]`처럼 배열로 적습니다. |
 | `status` | `released`(배포 중), `beta`, `alpha`, `wip`(작업 중) |
 | `links` | 모두 선택 항목입니다. `download`, `guide`, `site`(소개·매뉴얼 사이트), `issues`, `repo` |
-| `downloads` | 선택. 판마다 받는 곳이 다를 때 `[{ "label": "PC판", "url": "…", "icon": "gamebanana" }]`처럼 적으면 아이콘이 붙은 다운로드 버튼이 여러 개 생깁니다. `icon`은 `github` 또는 `gamebanana`. |
+| `downloads` | 선택. 판마다 받는 곳이 다를 때 `[{ "label": "PC", "url": "…" }]`처럼 여러 개 적습니다. 다운로드 버튼은 주소를 보고 GitHub Releases / GameBanana 아이콘을 자동으로 붙입니다. |
 | `related` | 함께 보여 줄 다른 프로젝트의 `id` 목록 (선택) |
 | `image` | 카드 대표 그림 (선택). `assets/img/games/`에 넣은 파일 경로나 외부 이미지 주소. 16:9 비율이 가장 잘 맞습니다. 없거나 불러오지 못하면 기종 색 배경에 영문 제목이 나옵니다. |
 | `imageFit` | 로고처럼 잘리면 안 되는 그림은 `"contain"` (선택) |

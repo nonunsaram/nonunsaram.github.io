@@ -42,7 +42,7 @@ const icon = name => {
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('viewBox', '0 0 24 24');
   svg.setAttribute('aria-hidden', 'true');
-  svg.classList.add('icon');
+  svg.classList.add('icon', `icon-${name}`);
   const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
   path.setAttribute('d', ICONS[name] ?? '');
   svg.append(path);
@@ -83,18 +83,21 @@ function projectCard(project, platforms, byId) {
   const platform = { label: list.map(item => item.label).join(' · '), color: list[0].color };
   const status = STATUS[project.status] ?? STATUS.released;
   const links = project.links ?? {};
-  // downloads: 판마다 받는 곳이 다를 때 [{ label, url, icon: "github" | "gamebanana" }]로 적습니다.
-  const downloads = (project.downloads ?? []).map(item =>
-    el('a', { class: 'btn primary', ...linkAttrs(item.url), title: /gamebanana\.com/.test(item.url) ? 'GameBanana에서 받기' : 'GitHub에서 받기' },
-      ICONS[item.icon] && icon(item.icon), item.label));
+  // 다운로드 버튼은 주소를 보고 GitHub Releases / GameBanana를 아이콘과 함께 표시합니다.
+  // 판마다 받는 곳이 다르면 "downloads": [{ "label": "GC", "url": "…" }]처럼 여러 개를 적습니다.
+  const downloads = project.downloads ?? (links.download ? [{ url: links.download }] : []);
+  const store = url => /gamebanana\.com/.test(url) ? ['gamebanana', 'GameBanana'] : /github\.com/.test(url) ? ['github', 'GitHub Releases'] : [null, '다운로드'];
   const actions = el('div', { class: 'actions' },
-    ...downloads,
-    links.download && el('a', { class: 'btn primary', ...linkAttrs(links.download) }, /gamebanana\.com/.test(links.download) ? 'GameBanana' : '다운로드'),
-    links.guide && el('a', { class: 'btn', ...linkAttrs(links.guide) }, '설치 안내'),
-    links.site && el('a', { class: 'btn', ...linkAttrs(links.site) }, '소개·매뉴얼'),
-    links.issues && el('a', { class: 'btn', ...linkAttrs(links.issues) }, '문제 제보'),
-    links.repo && el('a', { class: 'btn icon-only', ...linkAttrs(links.repo), 'aria-label': `${project.title} GitHub 저장소`, title: 'GitHub 저장소' }, icon('github')),
-  );
+    el('div', { class: 'downloads' }, ...downloads.map(item => {
+      const [iconName, label] = store(item.url);
+      return el('a', { class: 'btn primary', ...linkAttrs(item.url) },
+        item.label && el('span', { class: 'tag' }, item.label), iconName && icon(iconName), label);
+    })),
+    el('div', { class: 'links' },
+      links.guide && el('a', { class: 'btn small', ...linkAttrs(links.guide) }, '설치 안내'),
+      links.site && el('a', { class: 'btn small', ...linkAttrs(links.site) }, '소개·매뉴얼'),
+      links.issues && el('a', { class: 'btn small', ...linkAttrs(links.issues) }, '문제 제보'),
+      links.repo && el('a', { class: 'btn small icon-only', ...linkAttrs(links.repo), 'aria-label': `${project.title} GitHub 저장소`, title: 'GitHub 저장소' }, icon('github'))));
   const related = (project.related ?? []).map(id => byId.get(id)).filter(Boolean);
   return el('article', { class: 'project', id: project.id, 'data-platform': platformIds(project).join(' ') },
     projectMedia(project, platform),
@@ -148,6 +151,17 @@ function renderProjects(projects, platforms) {
   $('#stat-updated').textContent = formatDate(dated[0]?.updated) || '-';
 }
 
+/* ── 배경 물방울 ─────────────────────────── */
+function blowBubbles() {
+  const layer = $('.bubbles');
+  if (!layer) return;
+  const random = (min, max) => min + Math.random() * (max - min);
+  for (let i = 0; i < 22; i++) {
+    const size = random(20, 96);
+    layer.append(el('span', { class: 'bubble', style: `--x:${random(0, 100)}%;--s:${size}px;--d:${random(16, 34)}s;--delay:${-random(0, 34)}s;--sway:${random(14, 46)}px;--w:${random(2.6, 4.6)}s` }, el('i')));
+  }
+}
+
 /* ── 매뉴얼 ──────────────────────────────── */
 async function renderManuals(collections) {
   const sections = await Promise.all(collections.map(async collection => {
@@ -172,6 +186,8 @@ async function renderManuals(collections) {
   }));
   $('#manual-list').replaceChildren(...sections);
 }
+
+blowBubbles();
 
 try {
   const [site, platforms, data, manuals] = await Promise.all([
