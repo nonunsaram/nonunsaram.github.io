@@ -10,6 +10,8 @@
       "status": "released",
       "updated": "2026-10-04",
       "summary": "메뉴 텍스트와 UI 이미지를 한국어화하고, 수록 매뉴얼 7종을 번역했습니다.",
+      "image": "assets/img/games/sonic-mega-collection-plus.jpg",
+      "imagePosition": "center 62%",
       "highlights": [
         "메뉴·UI 한국어화",
         "매뉴얼 7종 번역"
@@ -22,21 +24,38 @@
       }
     },
     {
-      "id": "sonic-heroes-gamecube-korean",
+      "id": "sonic-heroes-korean",
       "title": "소닉 히어로즈",
       "originalTitle": "Sonic Heroes",
-      "platform": "gamecube",
-      "base": "일본판 · 미국판 GC",
-      "version": "v1.1.0",
+      "platform": [
+        "gamecube",
+        "pc"
+      ],
+      "base": "GC판 (일본판 · 미국판) · PC판 (Reloaded II 모드)",
+      "version": "GC v1.1.0",
       "status": "released",
       "updated": "2026-10-04",
-      "summary": "기존 한국어판을 복원한 판과 번역을 교정한 판을 일본어·영어 음성으로 각각 제공합니다.",
+      "summary": "GC판은 기존 한국어판을 복원한 판과 번역을 교정한 판을 일본어·영어 음성으로 각각 제공하고, PC판은 현대적인 표현으로 새로 다듬은 번역 모드입니다.",
+      "image": "assets/img/games/sonic-heroes.jpg",
+      "imagePosition": "center 55%",
       "highlights": [
-        "복원판 · 번역수정판",
-        "일본어 · 영어 음성"
+        "GC 복원판 · 번역수정판",
+        "일본어 · 영어 음성",
+        "PC Reloaded II 모드"
+      ],
+      "downloads": [
+        {
+          "label": "GC판",
+          "url": "https://github.com/nonunsaram/sonic-heroes-gamecube-korean/releases/tag/v1.1.0",
+          "icon": "github"
+        },
+        {
+          "label": "PC판",
+          "url": "https://gamebanana.com/mods/709498",
+          "icon": "gamebanana"
+        }
       ],
       "links": {
-        "download": "https://github.com/nonunsaram/sonic-heroes-gamecube-korean/releases/tag/v1.1.0",
         "guide": "https://github.com/nonunsaram/sonic-heroes-gamecube-korean#readme",
         "repo": "https://github.com/nonunsaram/sonic-heroes-gamecube-korean"
       }
@@ -51,6 +70,7 @@
       "status": "released",
       "updated": "2026-10-04",
       "summary": "팬 제작 개선판 Reloaded v1.2용 한국어 패처입니다. 4:3·와이드스크린을 자동으로 감지합니다.",
+      "image": "assets/img/games/shadow-reloaded.jpg",
       "highlights": [
         "4:3 · 와이드스크린",
         "일본어 · 영어 음성"
@@ -74,6 +94,8 @@
       "status": "released",
       "updated": "2026-10-04",
       "summary": "원본 GameCube판의 게임플레이와 화면비를 그대로 유지하는 한국어 패치입니다.",
+      "image": "assets/img/games/shadow-the-hedgehog.jpg",
+      "imagePosition": "center 42%",
       "highlights": [
         "원본 게임플레이 유지",
         "일본어 · 영어 음성"
@@ -97,6 +119,7 @@
       "status": "released",
       "updated": "2026-10-04",
       "summary": "대사·자막·월드맵·미션 설명·UI를 번역하는 HMM 모드입니다. 전체판은 EXE 옵션 화면까지 한국어화합니다.",
+      "image": "assets/img/games/sonic-unleashed.jpg",
       "highlights": [
         "HMM 모드",
         "기본판 · 전체판"
@@ -117,6 +140,8 @@
       "status": "alpha",
       "updated": "2026-09-29",
       "summary": "한글 UI와 본편·인게임 자막을 적용한 Dolphin용 시험 배포판입니다.",
+      "image": "assets/img/games/sonic-black-knight.jpg",
+      "imagePosition": "center 30%",
       "highlights": [
         "Dolphin 권장",
         "Xbox 패드 프로필 포함"
@@ -138,6 +163,8 @@
       "status": "released",
       "updated": "2026-09-27",
       "summary": "메뉴·기어·미션·스토리 자막을 번역하고 튜토리얼 영상에 한국어 자막을 넣었습니다.",
+      "image": "assets/img/games/sonic-riders.jpg",
+      "imagePosition": "center 40%",
       "highlights": [
         "스토리 자막",
         "튜토리얼 자막 27개"
@@ -158,6 +185,8 @@
       "status": "released",
       "updated": "2026-09-07",
       "summary": "소닉과 비밀의 링 팬 리메이크용 한국어 언어 모드입니다. 설치.bat 한 번으로 적용합니다.",
+      "image": "assets/img/games/project-reignition-logo.png",
+      "imageFit": "contain",
       "highlights": [
         "공식 언어 모드 방식",
         "간편 설치"
