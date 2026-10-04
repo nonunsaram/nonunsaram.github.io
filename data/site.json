@@ -1,0 +1,30 @@
+{
+  "title": "노는사람 한국어화 아카이브",
+  "subtitle": "SONIC KOREAN ARCHIVE",
+  "description": "노는사람이 만든 소닉 시리즈 비공식 한국어 패치와 한국어 매뉴얼을 한곳에 모았습니다.",
+  "author": "노는사람",
+  "channels": [
+    {
+      "id": "youtube",
+      "label": "YouTube",
+      "handle": "@nonunsaram",
+      "url": "https://www.youtube.com/@nonunsaram",
+      "description": "한국어 패치 플레이 영상과 소식"
+    },
+    {
+      "id": "x",
+      "label": "X",
+      "handle": "@nonunsaram",
+      "url": "https://x.com/nonunsaram",
+      "description": "작업 진행 상황과 업데이트 알림"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "handle": "nonunsaram",
+      "url": "https://github.com/nonunsaram",
+      "description": "모든 패치의 원본 저장소와 릴리스"
+    }
+  ],
+  "disclaimer": "비공식 팬 번역 프로젝트입니다. Sonic 및 관련 게임, 로고, 원본 매뉴얼의 권리는 SEGA 및 각 권리자에게 있으며, 이 사이트는 SEGA와 관련이 없습니다. 게임 ISO·ROM은 배포하지 않습니다."
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>노는사람 한국어화 아카이브</title>
+<meta name="description" content="노는사람이 만든 소닉 시리즈 비공식 한국어 패치와 한국어 매뉴얼을 한곳에 모은 아카이브입니다.">
+<meta property="og:title" content="노는사람 한국어화 아카이브">
+<meta property="og:description" content="소닉 시리즈 비공식 한국어 패치와 한국어 매뉴얼 아카이브">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nonunsaram.github.io/">
+<meta name="theme-color" content="#0a2a6e">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..900&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="module" src="assets/js/hub.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 이동</a>
+<header class="site-header">
+  <a href="./" class="brand">
+    <span class="brand-mark" aria-hidden="true">노</span>
+    <span class="brand-text"><span data-site="title">노는사람 한국어화 아카이브</span><small data-site="subtitle">SONIC KOREAN ARCHIVE</small></span>
+  </a>
+  <nav class="site-nav" aria-label="사이트">
+    <a href="#projects">한국어 패치</a>
+    <a href="#manuals">매뉴얼</a>
+    <a href="#channels">채널</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Sonic Korean Archive</p>
+      <h1>소닉을 한국어로.<br>한국어화 자료를 한곳에.</h1>
+      <p data-site="description">노는사람이 만든 소닉 시리즈 비공식 한국어 패치와 한국어 매뉴얼을 한곳에 모았습니다.</p>
+      <dl class="stats" id="stats" aria-label="아카이브 현황">
+        <div><dt>한국어 패치</dt><dd id="stat-projects">-</dd></div>
+        <div><dt>한국어 매뉴얼</dt><dd id="stat-manuals">-</dd></div>
+        <div><dt>최근 업데이트</dt><dd id="stat-updated">-</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="container">
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">Korean Patches</p><h2 id="projects-heading">한국어 패치</h2></div>
+        <div class="filters" role="group" aria-label="기종별 보기" id="filters"></div>
+      </div>
+      <p id="projects-status" class="muted" role="status">프로젝트를 불러오는 중입니다.</p>
+      <div id="project-list" class="projects"></div>
+    </section>
+
+    <section id="manuals" class="section" aria-labelledby="manuals-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">Manual Library</p><h2 id="manuals-heading">한국어 매뉴얼</h2></div>
+      </div>
+      <p class="muted">게임에 동봉된 매뉴얼을 한국어로 옮겨 웹에서 바로 읽을 수 있게 정리했습니다. 표지를 누르면 뷰어가 열립니다.</p>
+      <div id="manual-list"></div>
+    </section>
+
+    <section id="channels" class="section" aria-labelledby="channels-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">Channels</p><h2 id="channels-heading">노는사람 채널</h2></div>
+      </div>
+      <div id="channel-list" class="channels"></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p data-site="disclaimer">비공식 팬 번역 프로젝트입니다. Sonic 및 관련 게임의 권리는 SEGA 및 각 권리자에게 있습니다.</p>
+  <p>© 노는사람 · <a href="https://github.com/nonunsaram/nonunsaram.github.io">사이트 소스</a></p>
+</footer>
+</body>
+</html>
