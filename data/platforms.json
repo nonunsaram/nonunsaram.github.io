@@ -1,0 +1,7 @@
+{
+  "gamecube": { "label": "GameCube", "color": "#5b3fc0" },
+  "wii": { "label": "Wii", "color": "#1d8fd8" },
+  "ps2": { "label": "PlayStation 2", "color": "#1f3a93" },
+  "pc": { "label": "PC", "color": "#2c3340" },
+  "megadrive": { "label": "메가 드라이브", "color": "#111111" }
+}

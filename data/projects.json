@@ -1,0 +1,172 @@
+{
+  "projects": [
+    {
+      "id": "sonic-mega-collection-plus-ps2-korean",
+      "title": "소닉 메가 컬렉션 플러스",
+      "originalTitle": "Sonic Mega Collection Plus",
+      "platform": "ps2",
+      "base": "일본판 PS2",
+      "version": "v1.0.0",
+      "status": "released",
+      "updated": "2026-10-04",
+      "summary": "메뉴 텍스트와 UI 이미지를 한국어화하고, 수록 매뉴얼 7종을 번역했습니다.",
+      "highlights": [
+        "메뉴·UI 한국어화",
+        "매뉴얼 7종 번역"
+      ],
+      "links": {
+        "download": "https://github.com/nonunsaram/sonic-mega-collection-plus-ps2-korean/releases/tag/v1.0.0",
+        "guide": "https://github.com/nonunsaram/sonic-mega-collection-plus-ps2-korean#readme",
+        "repo": "https://github.com/nonunsaram/sonic-mega-collection-plus-ps2-korean",
+        "site": "https://nonunsaram.github.io/sonic-mega-collection-plus-ps2-korean/"
+      }
+    },
+    {
+      "id": "sonic-heroes-gamecube-korean",
+      "title": "소닉 히어로즈",
+      "originalTitle": "Sonic Heroes",
+      "platform": "gamecube",
+      "base": "일본판 · 미국판 GC",
+      "version": "v1.1.0",
+      "status": "released",
+      "updated": "2026-10-04",
+      "summary": "기존 한국어판을 복원한 판과 번역을 교정한 판을 일본어·영어 음성으로 각각 제공합니다.",
+      "highlights": [
+        "복원판 · 번역수정판",
+        "일본어 · 영어 음성"
+      ],
+      "links": {
+        "download": "https://github.com/nonunsaram/sonic-heroes-gamecube-korean/releases/tag/v1.1.0",
+        "guide": "https://github.com/nonunsaram/sonic-heroes-gamecube-korean#readme",
+        "repo": "https://github.com/nonunsaram/sonic-heroes-gamecube-korean"
+      }
+    },
+    {
+      "id": "shadow-the-hedgehog-reloaded-korean",
+      "title": "섀도우 더 헤지혹: 리로디드",
+      "originalTitle": "Shadow the Hedgehog: Reloaded",
+      "platform": "gamecube",
+      "base": "Reloaded v1.2 (GC)",
+      "version": "v1.0",
+      "status": "released",
+      "updated": "2026-10-04",
+      "summary": "팬 제작 개선판 Reloaded v1.2용 한국어 패처입니다. 4:3·와이드스크린을 자동으로 감지합니다.",
+      "highlights": [
+        "4:3 · 와이드스크린",
+        "일본어 · 영어 음성"
+      ],
+      "links": {
+        "download": "https://github.com/nonunsaram/shadow-the-hedgehog-reloaded-korean/releases/tag/v1.0",
+        "guide": "https://github.com/nonunsaram/shadow-the-hedgehog-reloaded-korean/blob/main/COMMUNITY_POST_GUIDE.md",
+        "repo": "https://github.com/nonunsaram/shadow-the-hedgehog-reloaded-korean"
+      },
+      "related": [
+        "shadow-the-hedgehog-korean"
+      ]
+    },
+    {
+      "id": "shadow-the-hedgehog-korean",
+      "title": "섀도우 더 헤지혹",
+      "originalTitle": "Shadow the Hedgehog",
+      "platform": "gamecube",
+      "base": "일본판 · 미국판 GC",
+      "version": "v0.1",
+      "status": "released",
+      "updated": "2026-10-04",
+      "summary": "원본 GameCube판의 게임플레이와 화면비를 그대로 유지하는 한국어 패치입니다.",
+      "highlights": [
+        "원본 게임플레이 유지",
+        "일본어 · 영어 음성"
+      ],
+      "links": {
+        "download": "https://github.com/nonunsaram/shadow-the-hedgehog-korean/releases/latest",
+        "guide": "https://github.com/nonunsaram/shadow-the-hedgehog-korean#readme",
+        "repo": "https://github.com/nonunsaram/shadow-the-hedgehog-korean"
+      },
+      "related": [
+        "shadow-the-hedgehog-reloaded-korean"
+      ]
+    },
+    {
+      "id": "unleashed-recompiled-korean",
+      "title": "소닉 언리쉬드 (Unleashed Recompiled)",
+      "originalTitle": "Unleashed Recompiled",
+      "platform": "pc",
+      "base": "Windows x64 v1.0.3",
+      "version": "1.0.6",
+      "status": "released",
+      "updated": "2026-10-04",
+      "summary": "대사·자막·월드맵·미션 설명·UI를 번역하는 HMM 모드입니다. 전체판은 EXE 옵션 화면까지 한국어화합니다.",
+      "highlights": [
+        "HMM 모드",
+        "기본판 · 전체판"
+      ],
+      "links": {
+        "download": "https://gamebanana.com/mods/715787",
+        "guide": "https://github.com/nonunsaram/unleashed-recompiled-korean/blob/main/Release/v1.0.6/README-KO.md",
+        "repo": "https://github.com/nonunsaram/unleashed-recompiled-korean"
+      }
+    },
+    {
+      "id": "sonic-and-the-black-kinght-korean",
+      "title": "소닉과 암흑의 기사",
+      "originalTitle": "Sonic and the Black Knight",
+      "platform": "wii",
+      "base": "북미판 Wii (RENE8P)",
+      "version": "v0.1 alpha",
+      "status": "alpha",
+      "updated": "2026-09-29",
+      "summary": "한글 UI와 본편·인게임 자막을 적용한 Dolphin용 시험 배포판입니다.",
+      "highlights": [
+        "Dolphin 권장",
+        "Xbox 패드 프로필 포함"
+      ],
+      "links": {
+        "download": "https://github.com/nonunsaram/sonic-and-the-black-kinght-korean/releases",
+        "guide": "https://github.com/nonunsaram/sonic-and-the-black-kinght-korean#readme",
+        "repo": "https://github.com/nonunsaram/sonic-and-the-black-kinght-korean",
+        "issues": "https://github.com/nonunsaram/sonic-and-the-black-kinght-korean/issues"
+      }
+    },
+    {
+      "id": "sonic-riders-korean",
+      "title": "소닉 라이더즈",
+      "originalTitle": "Sonic Riders",
+      "platform": "gamecube",
+      "base": "일본판 GC (GXEJ8P)",
+      "version": "v1.0",
+      "status": "released",
+      "updated": "2026-09-27",
+      "summary": "메뉴·기어·미션·스토리 자막을 번역하고 튜토리얼 영상에 한국어 자막을 넣었습니다.",
+      "highlights": [
+        "스토리 자막",
+        "튜토리얼 자막 27개"
+      ],
+      "links": {
+        "download": "https://github.com/nonunsaram/sonic-riders-korean/releases/tag/v1.0",
+        "guide": "https://github.com/nonunsaram/sonic-riders-korean#readme",
+        "repo": "https://github.com/nonunsaram/sonic-riders-korean"
+      }
+    },
+    {
+      "id": "project-reignition-korean",
+      "title": "프로젝트 리이그니션",
+      "originalTitle": "Project Reignition",
+      "platform": "pc",
+      "base": "Windows v1.0.2",
+      "version": "v0.3",
+      "status": "released",
+      "updated": "2026-09-07",
+      "summary": "소닉과 비밀의 링 팬 리메이크용 한국어 언어 모드입니다. 설치.bat 한 번으로 적용합니다.",
+      "highlights": [
+        "공식 언어 모드 방식",
+        "간편 설치"
+      ],
+      "links": {
+        "download": "https://github.com/nonunsaram/project-reignition-korean/releases/tag/v0.3",
+        "guide": "https://github.com/nonunsaram/project-reignition-korean#readme",
+        "repo": "https://github.com/nonunsaram/project-reignition-korean"
+      }
+    }
+  ]
+}
