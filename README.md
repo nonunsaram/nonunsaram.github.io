@@ -17,6 +17,7 @@ https://nonunsaram.github.io/ 에 게시되는 소닉 시리즈 비공식 한국
   "status": "released",
   "updated": "2026-11-01",
   "summary": "한 줄 소개",
+  "image": "assets/img/games/sonic-colors.jpg",
   "highlights": ["특징 1", "특징 2"],
   "links": {
     "download": "https://github.com/nonunsaram/…/releases/tag/v1.0",
@@ -34,6 +35,10 @@ https://nonunsaram.github.io/ 에 게시되는 소닉 시리즈 비공식 한국
 | `status` | `released`(배포 중), `beta`, `alpha`, `wip`(작업 중) |
 | `links` | 모두 선택 항목입니다. `download`, `guide`, `site`(소개·매뉴얼 사이트), `issues`, `repo` |
 | `related` | 함께 보여 줄 다른 프로젝트의 `id` 목록 (선택) |
+| `image` | 카드 대표 그림 (선택). `assets/img/games/`에 넣은 파일 경로나 외부 이미지 주소. 16:9 비율이 가장 잘 맞습니다. 없거나 불러오지 못하면 기종 색 배경에 영문 제목이 나옵니다. |
+| `imageFit` | 로고처럼 잘리면 안 되는 그림은 `"contain"` (선택) |
+| `logo` | 대표 그림 위에 겹쳐 올릴 투명 로고 (선택) |
+| `version`, `updated` | 선택. `updated`가 없으면 `related`의 첫 프로젝트 바로 뒤에 표시됩니다. |
 
 ## 매뉴얼 추가
 
@@ -41,7 +46,7 @@ https://nonunsaram.github.io/ 에 게시되는 소닉 시리즈 비공식 한국
 
 ## 채널·문구
 
-유튜브·X 주소와 사이트 문구는 `data/site.json`에 있습니다. `url`이 비어 있는 채널은 "링크 준비 중"으로 표시됩니다.
+유튜브·X·GitHub 주소와 사이트 문구는 `data/site.json`에 있습니다. 채널은 상단과 하단에 동그란 아이콘 링크로만 표시되며, `url`이 비어 있으면 숨겨집니다.
 
 ## 로컬 확인
 
@@ -53,7 +58,7 @@ python -m http.server 8000
 
 ## 디자인
 
-세가코리아 공식 사이트 느낌의 파란 계열(`--sega`)과 노란 포인트(`--ring`)를 씁니다. 글꼴은 SEGA 아시아 공식 사이트와 같은 [Noto Sans KR](https://fonts.google.com/noto/specimen/Noto+Sans+KR)(SIL Open Font License 1.1)을 Google Fonts에서 불러옵니다. 디자인 토큰은 각 프로젝트 사이트와 같게 유지합니다.
+Wii 시절 프루티거 에어로 느낌(하늘 배경, 유리 패널, 동글동글한 광택 버튼)입니다. 배경(`assets/img/sky.jpg`)과 감 프로필(`assets/img/avatar.jpg`)은 노는사람 유튜브 채널 그림입니다. 글꼴은 한글 [Noto Sans KR](https://fonts.google.com/noto/specimen/Noto+Sans+KR), 영문 [Nunito](https://fonts.google.com/specimen/Nunito)(둘 다 SIL Open Font License 1.1)를 Google Fonts에서 불러옵니다.
 
 ## 권리 안내
 

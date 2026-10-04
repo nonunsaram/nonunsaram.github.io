@@ -54,47 +54,47 @@ function renderSite(site) {
     const value = site[node.dataset.site];
     if (value) node.textContent = value;
   }
-  $('#channel-list').replaceChildren(...site.channels.map(channel => {
-    const ready = Boolean(channel.url);
-    const card = el(ready ? 'a' : 'div', {
-      class: `channel channel-${channel.id}${ready ? '' : ' pending'}`,
-      ...(ready ? linkAttrs(channel.url) : { 'aria-disabled': 'true' }),
-    },
-      el('span', { class: 'channel-icon' }, icon(channel.id)),
-      el('span', { class: 'channel-body' },
-        el('strong', {}, channel.label),
-        el('span', { class: 'channel-handle' }, channel.handle),
-        el('span', { class: 'channel-desc' }, ready ? channel.description : '링크 준비 중입니다.')),
-      ready ? el('span', { class: 'channel-go', 'aria-hidden': 'true' }, '↗') : null,
-    );
-    return card;
-  }));
+  for (const target of ['#channels', '#footer-channels']) {
+    $(target).replaceChildren(...site.channels.filter(channel => channel.url).map(channel =>
+      el('a', { class: `channel channel-${channel.id}`, ...linkAttrs(channel.url), 'aria-label': `노는사람 ${channel.label}`, title: channel.label }, icon(channel.id))));
+  }
 }
 
 /* ── 프로젝트 ────────────────────────────── */
+function projectMedia(project, platform) {
+  const media = el('div', { class: `media${project.image ? '' : ' no-image'}`, style: `--platform:${platform.color}` },
+    el('span', { class: 'media-title', 'aria-hidden': 'true' }, project.originalTitle));
+  if (project.image) {
+    const image = el('img', { src: project.image, alt: '', loading: 'lazy', decoding: 'async', class: project.imageFit === 'contain' ? 'contain' : '' });
+    image.addEventListener('error', () => { image.remove(); media.classList.add('no-image'); });
+    media.prepend(image);
+  }
+  if (project.logo) { media.classList.add('has-logo'); media.append(el('img', { src: project.logo, alt: '', loading: 'lazy', class: 'media-logo' })); }
+  media.append(el('span', { class: 'platform-pill' }, platform.label));
+  return media;
+}
+
 function projectCard(project, platforms, byId) {
   const platform = platforms[project.platform] ?? { label: project.platform, color: '#1259d6' };
   const status = STATUS[project.status] ?? STATUS.released;
   const links = project.links ?? {};
   const actions = el('div', { class: 'actions' },
-    links.download && el('a', { class: 'btn primary', ...linkAttrs(links.download) }, '다운로드'),
+    links.download && el('a', { class: 'btn primary', ...linkAttrs(links.download) }, /gamebanana\.com/.test(links.download) ? 'GameBanana' : '다운로드'),
     links.guide && el('a', { class: 'btn', ...linkAttrs(links.guide) }, '설치 안내'),
     links.site && el('a', { class: 'btn', ...linkAttrs(links.site) }, '소개·매뉴얼'),
     links.issues && el('a', { class: 'btn', ...linkAttrs(links.issues) }, '문제 제보'),
     links.repo && el('a', { class: 'btn icon-only', ...linkAttrs(links.repo), 'aria-label': `${project.title} GitHub 저장소`, title: 'GitHub 저장소' }, icon('github')),
   );
   const related = (project.related ?? []).map(id => byId.get(id)).filter(Boolean);
-  return el('article', { class: 'project', id: project.id, 'data-platform': project.platform, style: `--platform:${platform.color}` },
-    el('div', { class: 'keyart', 'aria-hidden': 'true' },
-      el('span', { class: 'keyart-platform' }, platform.label),
-      el('span', { class: 'keyart-title' }, project.originalTitle)),
+  return el('article', { class: 'project', id: project.id, 'data-platform': project.platform },
+    projectMedia(project, platform),
     el('div', { class: 'project-body' },
       el('div', { class: 'project-meta' },
         el('span', { class: `badge ${status.class}` }, status.label),
-        el('span', { class: 'version' }, project.version),
-        el('span', { class: 'updated' }, `${formatDate(project.updated)} 업데이트`)),
+        project.version && el('span', { class: 'version' }, project.version),
+        project.updated && el('span', { class: 'updated' }, `${formatDate(project.updated)} 업데이트`)),
       el('h3', {}, project.title),
-      el('p', { class: 'original' }, `${project.originalTitle} · ${platform.label}`),
+      el('p', { class: 'original' }, project.originalTitle),
       el('p', { class: 'summary' }, project.summary),
       el('ul', { class: 'facts' },
         el('li', {}, el('span', {}, '대상'), project.base),
@@ -104,7 +104,13 @@ function projectCard(project, platforms, byId) {
 }
 
 function renderProjects(projects, platforms) {
-  const sorted = [...projects].sort((a, b) => (b.updated ?? '').localeCompare(a.updated ?? '') || 0);
+  // 최근 업데이트 순으로 정렬하고, 날짜가 없는 항목은 관련 프로젝트 바로 뒤에 둡니다.
+  const dated = projects.filter(project => project.updated).sort((a, b) => b.updated.localeCompare(a.updated));
+  const sorted = [...dated];
+  for (const project of projects.filter(item => !item.updated)) {
+    const anchor = sorted.findIndex(item => (project.related ?? []).includes(item.id));
+    sorted.splice(anchor < 0 ? sorted.length : anchor + 1, 0, project);
+  }
   const byId = new Map(sorted.map(project => [project.id, project]));
   const cards = sorted.map(project => projectCard(project, platforms, byId));
   $('#project-list').replaceChildren(...cards);
@@ -130,7 +136,7 @@ function renderProjects(projects, platforms) {
   apply('all');
 
   $('#stat-projects').textContent = `${sorted.length}개`;
-  $('#stat-updated').textContent = formatDate(sorted[0]?.updated) || '-';
+  $('#stat-updated').textContent = formatDate(dated[0]?.updated) || '-';
 }
 
 /* ── 매뉴얼 ──────────────────────────────── */

@@ -10,6 +10,7 @@
       "status": "released",
       "updated": "2026-10-04",
       "summary": "메뉴 텍스트와 UI 이미지를 한국어화하고, 수록 매뉴얼 7종을 번역했습니다.",
+      "image": "assets/img/games/sonic-mega-collection-plus.jpg",
       "highlights": [
         "메뉴·UI 한국어화",
         "매뉴얼 7종 번역"
@@ -31,6 +32,7 @@
       "status": "released",
       "updated": "2026-10-04",
       "summary": "기존 한국어판을 복원한 판과 번역을 교정한 판을 일본어·영어 음성으로 각각 제공합니다.",
+      "image": "https://images.gamebanana.com/img/Webpage/Game/Profile/Background/63c71d8c7e0f6.jpeg",
       "highlights": [
         "복원판 · 번역수정판",
         "일본어 · 영어 음성"
@@ -39,7 +41,30 @@
         "download": "https://github.com/nonunsaram/sonic-heroes-gamecube-korean/releases/tag/v1.1.0",
         "guide": "https://github.com/nonunsaram/sonic-heroes-gamecube-korean#readme",
         "repo": "https://github.com/nonunsaram/sonic-heroes-gamecube-korean"
-      }
+      },
+      "related": [
+        "sonic-heroes-pc-korean"
+      ]
+    },
+    {
+      "id": "sonic-heroes-pc-korean",
+      "title": "소닉 히어로즈 (PC)",
+      "originalTitle": "Sonic Heroes",
+      "platform": "pc",
+      "base": "PC판 · Reloaded II 모드",
+      "status": "released",
+      "summary": "PC판 소닉 히어로즈를 현대적인 표현으로 새로 다듬은 한국어 번역 모드입니다.",
+      "image": "https://images.gamebanana.com/img/ss/mods/sgi_sd_image_6a8d4e8b72299.webp",
+      "highlights": [
+        "Reloaded II 모드",
+        "GameBanana 배포"
+      ],
+      "links": {
+        "download": "https://gamebanana.com/mods/709498"
+      },
+      "related": [
+        "sonic-heroes-gamecube-korean"
+      ]
     },
     {
       "id": "shadow-the-hedgehog-reloaded-korean",
@@ -51,6 +76,7 @@
       "status": "released",
       "updated": "2026-10-04",
       "summary": "팬 제작 개선판 Reloaded v1.2용 한국어 패처입니다. 4:3·와이드스크린을 자동으로 감지합니다.",
+      "image": "assets/img/games/shadow-reloaded.jpg",
       "highlights": [
         "4:3 · 와이드스크린",
         "일본어 · 영어 음성"
@@ -97,6 +123,7 @@
       "status": "released",
       "updated": "2026-10-04",
       "summary": "대사·자막·월드맵·미션 설명·UI를 번역하는 HMM 모드입니다. 전체판은 EXE 옵션 화면까지 한국어화합니다.",
+      "image": "https://images.gamebanana.com/img/ss/mods/sgi_sd_image_6aa2862db2100.webp",
       "highlights": [
         "HMM 모드",
         "기본판 · 전체판"
@@ -105,7 +132,8 @@
         "download": "https://gamebanana.com/mods/715787",
         "guide": "https://github.com/nonunsaram/unleashed-recompiled-korean/blob/main/Release/v1.0.6/README-KO.md",
         "repo": "https://github.com/nonunsaram/unleashed-recompiled-korean"
-      }
+      },
+      "logo": "assets/img/games/unleashed-recompiled-logo.png"
     },
     {
       "id": "sonic-and-the-black-kinght-korean",
@@ -158,6 +186,8 @@
       "status": "released",
       "updated": "2026-09-07",
       "summary": "소닉과 비밀의 링 팬 리메이크용 한국어 언어 모드입니다. 설치.bat 한 번으로 적용합니다.",
+      "image": "assets/img/games/project-reignition-logo.png",
+      "imageFit": "contain",
       "highlights": [
         "공식 언어 모드 방식",
         "간편 설치"
